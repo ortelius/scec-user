@@ -44,22 +44,22 @@ func GetUsers(c *fiber.Ctx) error {
 
 	defer cursor.Close() // close the cursor when returning from this function
 
-	users := model.NewUsers() // define a list of users to be returned
+	var users []*model.User // define a list of users to be returned
 
 	for cursor.HasMore() { // loop thru all of the documents
 
-		user := model.NewUser() // fetched user
-		var meta driver.DocumentMeta           // data about the fetch
+		user := model.NewUser()      // fetched user
+		var meta driver.DocumentMeta // data about the fetch
 
 		// fetch a document from the cursor
 		if meta, err = cursor.ReadDocument(ctx, user); err != nil {
 			logger.Sugar().Errorf("Failed to read document: %v", err)
 		}
-		users.Users = append(users.Users, user)       // add the user to the list
+		users = append(users, user)                                          // add the user to the list
 		logger.Sugar().Infof("Got doc with key '%s' from query\n", meta.Key) // log the key
 	}
 
-	return c.JSON(userss) // return the list of users in JSON format
+	return c.JSON(users) // return the list of users in JSON format
 }
 
 // GetUser godoc
@@ -124,10 +124,10 @@ func GetUser(c *fiber.Ctx) error {
 // @Router /msapi/user [post]
 func NewUser(c *fiber.Ctx) error {
 
-	var err error                                 // for error handling
-	var meta driver.DocumentMeta                  // data about the document
-	var ctx = context.Background()                // use default database context
-	user := model.NewUser() // define a user to be returned
+	var err error                  // for error handling
+	var meta driver.DocumentMeta   // data about the document
+	var ctx = context.Background() // use default database context
+	user := model.NewUser()        // define a user to be returned
 
 	if err = c.BodyParser(user); err != nil { // parse the JSON into the user object
 		return c.Status(503).Send([]byte(err.Error()))
@@ -150,9 +150,9 @@ func NewUser(c *fiber.Ctx) error {
 func setupRoutes(app *fiber.App) {
 
 	app.Get("/swagger/*", swagger.HandlerDefault) // handle displaying the swagger
-	app.Get("/msapi/user", GetUsers)          // list of users
-	app.Get("/msapi/user/:key", GetUser)      // single user based on name or key
-	app.Post("/msapi/user", NewUser)          // save a single user
+	app.Get("/msapi/user", GetUsers)              // list of users
+	app.Get("/msapi/user/:key", GetUser)          // single user based on name or key
+	app.Post("/msapi/user", NewUser)              // save a single user
 }
 
 // @title Ortelius v11 User Microservice

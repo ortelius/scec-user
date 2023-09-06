@@ -1,5 +1,14 @@
-# Ortelius v11 Domain Microservice
-RestAPI for the Domain Object
+# Ortelius v11 User Microservice
+RestAPI for the User Object
+![Release](https://img.shields.io/github/v/release/ortelius/scec-user?sort=semver)
+![license](https://img.shields.io/github/license/ortelius/scec-user)
+
+![Build](https://img.shields.io/github/actions/workflow/status/ortelius/scec-user/build-push-chart.yml)
+[![MegaLinter](https://github.com/ortelius/scec-user/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/ortelius/scec-user/actions?query=workflow%3AMegaLinter+branch%3Amain)
+![CodeQL](https://github.com/ortelius/scec-user/workflows/CodeQL/badge.svg)
+[![OpenSSF-Scorecard](https://api.securityscorecards.dev/projects/github.com/ortelius/scec-user/badge)](https://api.securityscorecards.dev/projects/github.com/ortelius/scec-user)
+
+![Discord](https://img.shields.io/discord/722468819091849316)
 
 ## Version: 11.0.0
 
@@ -13,51 +22,51 @@ ortelius-dev@googlegroups.com
 **License:** [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
 
 ---
-### /msapi/domain
+### /msapi/user
 
 #### GET
 ##### Summary
 
-Get a List of Domains
+Get a List of Users
 
 ##### Description
 
-Get a list of domains for the user.
+Get a list ofthe user.
 
 ##### Responses
 
 | Code | Description |
-|------|-------------|
-| 200  | OK          |
+| ---- | ----------- |
+| 200 | OK |
 
 #### POST
 ##### Summary
 
-Create a Domain
+Create a User
 
 ##### Description
 
-Create a new Domain and persist it
+Create a new User and persist it
 
 ##### Responses
 
 | Code | Description |
-|------|-------------|
-| 200  | OK          |
+| ---- | ----------- |
+| 200 | OK |
 
-### /msapi/domain/:key
+### /msapi/user/:key
 
 #### GET
 ##### Summary
 
-Get a Domain
+Get a User
 
 ##### Description
 
-Get a domain based on the _key or name.
+Get a user based on the _key or name.
 
 ##### Responses
 
 | Code | Description |
-|------|-------------|
-| 200  | OK          |
+| ---- | ----------- |
+| 200 | OK |
