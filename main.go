@@ -105,7 +105,7 @@ func GetUser(c *fiber.Ctx) error {
 
 	} else { // not found so get from NFT Storage
 		if jsonStr, exists := database.MakeJSON(key); exists {
-			if err := json.Unmarshal([]byte(jsonStr), &user); err != nil { // convert the JSON string from LTF into the object
+			if err := json.Unmarshal([]byte(jsonStr), user); err != nil { // convert the JSON string from LTF into the object
 				logger.Sugar().Errorf("Failed to unmarshal from LTS: %v", err)
 			}
 		}
