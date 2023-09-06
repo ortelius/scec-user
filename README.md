@@ -36,8 +36,8 @@ Get a list ofthe user.
 ##### Responses
 
 | Code | Description |
-|------|-------------|
-| 200  | OK          |
+| ---- | ----------- |
+| 200 | OK |
 
 #### POST
 ##### Summary
@@ -51,8 +51,8 @@ Create a new User and persist it
 ##### Responses
 
 | Code | Description |
-|------|-------------|
-| 200  | OK          |
+| ---- | ----------- |
+| 200 | OK |
 
 ### /msapi/user/:key
 
@@ -68,5 +68,5 @@ Get a user based on the _key or name.
 ##### Responses
 
 | Code | Description |
-|------|-------------|
-| 200  | OK          |
+| ---- | ----------- |
+| 200 | OK |
