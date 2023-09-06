@@ -18,7 +18,7 @@ import (
 var logger = database.InitLogger()
 var dbconn = database.InitializeDB("evidence")
 
-// GetUser godoc
+// GetUsers godoc
 // @Summary Get a List of Users
 // @Description Get a list ofthe user.
 // @Tags user
