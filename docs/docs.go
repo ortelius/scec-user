@@ -24,9 +24,9 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/msapi/domain": {
+        "/msapi/user": {
             "get": {
-                "description": "Get a list of domains for the user.",
+                "description": "Get a list ofthe user.",
                 "consumes": [
                     "*/*"
                 ],
@@ -34,9 +34,9 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "domain"
+                    "user"
                 ],
-                "summary": "Get a List of Domains",
+                "summary": "Get a List of Users",
                 "responses": {
                     "200": {
                         "description": "OK"
@@ -44,7 +44,7 @@ const docTemplate = `{
                 }
             },
             "post": {
-                "description": "Create a new Domain and persist it",
+                "description": "Create a new User and persist it",
                 "consumes": [
                     "application/json"
                 ],
@@ -52,9 +52,9 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "domain"
+                    "user"
                 ],
-                "summary": "Create a Domain",
+                "summary": "Create a User",
                 "responses": {
                     "200": {
                         "description": "OK"
@@ -62,9 +62,9 @@ const docTemplate = `{
                 }
             }
         },
-        "/msapi/domain/:key": {
+        "/msapi/user/:key": {
             "get": {
-                "description": "Get a domain based on the _key or name.",
+                "description": "Get a user based on the _key or name.",
                 "consumes": [
                     "*/*"
                 ],
@@ -72,9 +72,9 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "domain"
+                    "user"
                 ],
-                "summary": "Get a Domain",
+                "summary": "Get a User",
                 "responses": {
                     "200": {
                         "description": "OK"
@@ -89,10 +89,10 @@ const docTemplate = `{
 var SwaggerInfo = &swag.Spec{
 	Version:          "11.0.0",
 	Host:             "localhost:3000",
-	BasePath:         "/msapi/domain",
+	BasePath:         "/msapi/user",
 	Schemes:          []string{},
-	Title:            "Ortelius v11 Domain Microservice",
-	Description:      "RestAPI for the Domain Object",
+	Title:            "Ortelius v11 User Microservice",
+	Description:      "RestAPI for the User Object\n![Release](https://img.shields.io/github/v/release/ortelius/scec-user?sort=semver)\n![license](https://img.shields.io/github/license/ortelius/scec-user)\n\n![Build](https://img.shields.io/github/actions/workflow/status/ortelius/scec-user/build-push-chart.yml)\n[![MegaLinter](https://github.com/ortelius/scec-user/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/ortelius/scec-user/actions?query=workflow%3AMegaLinter+branch%3Amain)\n![CodeQL](https://github.com/ortelius/scec-user/workflows/CodeQL/badge.svg)\n[![OpenSSF-Scorecard](https://api.securityscorecards.dev/projects/github.com/ortelius/scec-user/badge)](https://api.securityscorecards.dev/projects/github.com/ortelius/scec-user)\n\n![Discord](https://img.shields.io/discord/722468819091849316)",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",
