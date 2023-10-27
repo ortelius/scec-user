@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   scec-user:
   - apiVersion: v2
+    appVersion: 11.0.272
+    created: "2023-10-27T14:47:31.319083041Z"
+    description: Domain microservice
+    digest: d259ff7f6b684f94c99cc88e7d114cbf7df3c128b67963e22a4bb20859ceb73a
+    icon: https://ortelius.github.io/ortelius-charts/logo.png
+    name: scec-user
+    type: application
+    urls:
+    - https://github.com/ortelius/scec-user/releases/download/scec-user-11.0.272/scec-user-11.0.272.tgz
+    version: 11.0.272
+  - apiVersion: v2
     appVersion: 11.0.270
     created: "2023-10-25T06:40:10.698895128Z"
     description: Domain microservice
@@ -1167,4 +1178,4 @@ entries:
     urls:
     - https://github.com/ortelius/scec-user/releases/download/scec-user-11.0.10/scec-user-11.0.10.tgz
     version: 11.0.10
-generated: "2023-10-25T06:40:10.698371826Z"
+generated: "2023-10-27T14:47:31.318511443Z"
