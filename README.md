@@ -1,4 +1,7 @@
 # Ortelius v11 User Microservice
+
+> Version 11.0.0
+
 RestAPI for the User Object
 ![Release](https://img.shields.io/github/v/release/ortelius/scec-user?sort=semver)
 ![license](https://img.shields.io/github/license/ortelius/scec-user)
@@ -10,63 +13,61 @@ RestAPI for the User Object
 
 ![Discord](https://img.shields.io/discord/722468819091849316)
 
-## Version: 11.0.0
+## Path Table
 
-### Terms of service
-<http://swagger.io/terms/>
+| Method | Path | Description |
+| --- | --- | --- |
+| GET | [/msapi/user](#getmsapiuser) | Get a List of Users |
+| POST | [/msapi/user](#postmsapiuser) | Create a User |
+| GET | [/msapi/user/:key](#getmsapiuserkey) | Get a User |
 
-**Contact information:**
-Ortelius Google Group
-ortelius-dev@googlegroups.com
+## Reference Table
 
-**License:** [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+| Name | Path | Description |
+| --- | --- | --- |
 
----
-### /msapi/user
+## Path Details
 
-#### GET
-##### Summary
+***
 
+### [GET]/msapi/user
+
+- Summary  
 Get a List of Users
 
-##### Description
-
+- Description  
 Get a list ofthe user.
 
-##### Responses
+#### Responses
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+- 200 OK
 
-#### POST
-##### Summary
+***
 
+### [POST]/msapi/user
+
+- Summary  
 Create a User
 
-##### Description
-
+- Description  
 Create a new User and persist it
 
-##### Responses
+#### Responses
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+- 200 OK
 
-### /msapi/user/:key
+***
 
-#### GET
-##### Summary
+### [GET]/msapi/user/:key
 
+- Summary  
 Get a User
 
-##### Description
-
+- Description  
 Get a user based on the _key or name.
 
-##### Responses
+#### Responses
 
-| Code | Description |
-|------|-------------|
-| 200  | OK          |
+- 200 OK
+
+## References
