@@ -4,7 +4,7 @@
 
 RestAPI for the User Object
 ![Release](https://img.shields.io/github/v/release/ortelius/scec-user?sort=semver)
-![license](https://img.shields.io/github/license/ortelius/scec-user)
+![license](https://img.shields.io/github/license/ortelius/.github)
 
 ![Build](https://img.shields.io/github/actions/workflow/status/ortelius/scec-user/build-push-chart.yml)
 [![MegaLinter](https://github.com/ortelius/scec-user/workflows/MegaLinter/badge.svg?branch=main)](https://github.com/ortelius/scec-user/actions?query=workflow%3AMegaLinter+branch%3Amain)
