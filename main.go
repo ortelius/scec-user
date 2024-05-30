@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 
-	_ "cli/docs"
+	_ "github.com/ortelius/scec-user/docs"
 
 	driver "github.com/arangodb/go-driver/v2/arangodb"
 	"github.com/arangodb/go-driver/v2/arangodb/shared"
